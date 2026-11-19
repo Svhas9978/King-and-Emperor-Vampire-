@@ -1,23 +1,33 @@
-# This workname: Build mod jar
+name: Build mod jar
+
 on:
   push:
   workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-java@v5
         with:
           distribution: temurin
-          java-version: 8
+          java-version: '8'
+
       - uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: 7.3.3
+          gradle-version: '7.3.3'
           cache-disabled: true
-      - name: Build
+
+      - name: Build mod jar
+        working-directory: darkthrone-1.0.0-source
         run: gradle build --no-daemon
+
       - uses: actions/upload-artifact@v4
         with:
           name: darkthrone-jar
-          path: build/libs/*.jarflow us      uses: gradle/actions/dependency-submission@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
+          path: darkthrone-1.0.0-source/build/libs/*.jar
+          if-no-files-found: error
