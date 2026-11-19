@@ -1,0 +1,19 @@
+{
+  "item.darkthrone.ancient_dragon_heart": "Heart of the Primordial Dragon",
+  "item.darkthrone.ritual_dagger": "Ritual Dagger",
+  "item.darkthrone.king_regalia": "Regalia of the King of Vampires",
+  "item.darkthrone.emperor_regalia": "Regalia of the Emperor of Darkness",
+  "block.darkthrone.blood_obelisk": "Blood Obelisk",
+  "block.darkthrone.blood_portal_frame": "Blood Void Portal Frame",
+  "entity.darkthrone.xardrot": "Xard'Rot",
+  "effect.darkthrone.primordial_fury": "Primordial Fury",
+  "effect.darkthrone.blood_eclipse": "Blood Eclipse",
+  "itemGroup.darkthrone": "Dark Throne",
+  "darkthrone.msg.king": "§5You have reached the title of King of Vampires.",
+  "darkthrone.msg.locked": "§cThis ability is not available to you yet.",
+  "darkthrone.msg.cooldown": "§eCooldown: %s s",
+  "key.darkthrone.pack": "Call of the Blood Pack",
+  "key.darkthrone.roar": "Primordial Roar",
+  "key.darkthrone.eclipse": "Blood Eclipse",
+  "key.categories.darkthrone": "Dark Throne"
+}

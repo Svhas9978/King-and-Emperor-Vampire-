@@ -1,0 +1,21 @@
+{
+  "item.darkthrone.ancient_dragon_heart": "Сердце Первородного Дракона",
+  "item.darkthrone.ritual_dagger": "Ритуальный кинжал",
+  "item.darkthrone.king_regalia": "Регалия Короля Вампиров",
+  "item.darkthrone.emperor_regalia": "Регалия Императора Тьмы",
+  "block.darkthrone.blood_obelisk": "Кровавый обелиск",
+  "block.darkthrone.blood_portal_frame": "Рамка Кровавой Пустоты",
+  "entity.darkthrone.xardrot": "Ксард'Рот",
+  "effect.darkthrone.primordial_fury": "Гнев Первородного Дракона",
+  "effect.darkthrone.blood_eclipse": "Кровавое Затмение",
+  "darkthrone.title.king": "Король вампиров",
+  "darkthrone.title.emperor": "Император Тьмы",
+  "key.darkthrone.pack": "Зов Кровавой Стаи",
+  "key.darkthrone.roar": "Гнев Первородного Дракона",
+  "key.darkthrone.eclipse": "Кровавое Затмение",
+  "key.categories.darkthrone": "Dark Throne",
+  "darkthrone.msg.king": "§5Ты достиг титула Короля вампиров.",
+  "darkthrone.msg.locked": "§cЭта способность тебе пока недоступна.",
+  "darkthrone.msg.cooldown": "§eПерезарядка: %s с",
+  "itemGroup.darkthrone": "Dark Throne"
+}

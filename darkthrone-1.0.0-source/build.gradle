@@ -1,0 +1,63 @@
+buildscript {
+    repositories {
+        maven { url = 'https://maven.minecraftforge.net' }
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:5.1.+'
+    }
+}
+apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'eclipse'
+apply plugin: 'maven-publish'
+
+version = project.mod_version
+group = 'ru.darkthrone'
+archivesBaseName = project.mod_id
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(8)
+
+minecraft {
+    mappings channel: 'official', version: '1.16.5'
+    runs {
+        client {
+            workingDirectory project.file('run')
+            property 'forge.logging.console.level', 'debug'
+            mods { darkthrone { source sourceSets.main } }
+        }
+        server {
+            workingDirectory project.file('run')
+            property 'forge.logging.console.level', 'debug'
+            mods { darkthrone { source sourceSets.main } }
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+    // Vampirism's Maven (only needed if you want Vampirism on the dev-run classpath)
+    maven { name = 'Vampirism'; url = 'https://maven.maxanier.de' }
+}
+
+dependencies {
+    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+
+    // The addon talks to Vampirism through VampirismBridge (reflection), so it
+    // compiles WITHOUT Vampirism on the classpath. To also run it in the dev
+    // environment with Vampirism, uncomment the next line (check the version exists
+    // on https://maven.maxanier.de first). In a normal modpack you just put both jars in /mods.
+    // runtimeOnly fg.deobf("de.teamlapen.vampirism:Vampirism:${minecraft_version}-${vampirism_version}")
+}
+
+jar {
+    manifest {
+        attributes([
+            "Specification-Title": "darkthrone",
+            "Specification-Vendor": "darkthrone",
+            "Specification-Version": "1",
+            "Implementation-Title": project.name,
+            "Implementation-Version": "${version}",
+            "Implementation-Vendor": "darkthrone"
+        ])
+    }
+}
